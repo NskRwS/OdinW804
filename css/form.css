@@ -1,0 +1,77 @@
+.form-an {
+	margin: 30px auto;
+	background-color: rgba(0, 0, 20, 0.7);
+	width: 390px;
+	padding: 10px;
+	border: 1pt black;
+	border-radius: 5px;
+	z-index: 99;
+}
+
+.ans-ring {
+	max-width: 380px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+
+.form-ring {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.form-ring div {
+	padding: 10px 0;
+}
+
+.bot-send-mail {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.form-ring label,
+.form-ring input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.form-ring label {
+	color: #fff;
+	font-size: 18px;
+	text-shadow: 2px 2px 2px black;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-ring input {
+	padding: 10px 15px;
+	margin-top: 10px;
+}
+
+.form-ring label span {
+	font-size: 20px;
+	color: rgb(250, 44, 44);
+}
+
+.form-ring .bot-send-mail {
+	padding: 15px;
+	margin-top: 10px;
+	background: none;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: bold;
+	background-color: #009b97;
+	cursor: pointer;
+	border: 3px #009b97 solid;
+	border-radius: 5px;
+}
+
+.form-ring .bot-send-mail:hover {
+	color: #009b97;
+	background-color: rgb(37, 21, 21);
+}
