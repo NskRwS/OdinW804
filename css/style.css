@@ -42,20 +42,21 @@ h1 {
 	color: chocolate;
 	text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.17);
 	font-size: calc(34px + (17 + 17*0.7) * ((100vw  - 320px) / 1900));
-	/* font-size: calc(36px + (20 + 16*0.7) * ((100vw - 320px) / 1920)); */
-	line-height: 1.2;
-	margin: 0;
+	line-height: 1;
+	margin: 0 auto 20px auto;
 }
 
 h2 {
 	font-size: 24pt;
 	color: chocolate;
-	margin: 0;
+	margin: 0 0 -10px 0;
 	padding: 0;
 	width: 100%;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
+	line-height: 95%;
+	font-size: calc(24px + (12 + 12*0.7) * ((100vw - 320px) / 1900));
 }
 
 .fence {
@@ -172,7 +173,7 @@ h2 {
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: start;
 	z-index: 0;
 }
 
@@ -188,11 +189,11 @@ h2 {
 	background-color: #fff;
 	box-shadow: 4px 4px 8px black;
 	display: inline-block;
-	min-width: 22vw;
-	max-width: 25vw;
-	height: 25vh;
+	width: 25vw;
+	min-width: 310px;
+	height: 15vw;
 	padding: 10px 10px;
-	margin: 20px 10px;
+	margin-bottom: 20px;
 }
 .wrapper__first-txt p {
 	display: inline-block;
@@ -200,22 +201,24 @@ h2 {
 	text-align: justify;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	min-width: 22vw;
-	max-width: 25vw;
-	font-size: calc(12px + (6 + 6*0.7) * ((100vw - 320px) / 1900));
+	min-width: 310px;
+	height: 15vw;
+	font-size: calc(14px + (6 + 6*0.7) * ((100vw - 340px) / 1900));
 	line-height: 100%;
-	margin-top: 4px;
 	}
 
 	.wrapper__first img {
+	box-sizing: border-box;
 	border: 3px solid;
+	border-radius: 25%;
 	box-shadow: 4px 4px 8px black;
 	border-color: chocolate;
 	position: relative;
 	display: inline-block;
-	min-height: 30vh;
-	min-width: 20vw;
-	margin: 20px 10px 0 10px;
+	min-width: 310px;
+	height: 15vw;
+	padding: 0;
+	margin: 0 30px 20px 30px;
 }
 
 .main__forms {
