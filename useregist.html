@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Формы регистрации  авторизации">
+	<meta name="author" content="Разживин Сергей Валентинович">
+	<meta name="robots" content="none">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2 ?family=Roboto:wght@100;300;400;500;700;900&" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/form.css">
+	<title>«W804 Формы, mySQL»</title>
+</head>
+
+<body>
+	<header class="header"></header>
+
+	<main class="main">
+		<section class="main__forms">
+			<div class="form-an">
+				<form class="ans-ring" autocomplete="off" action="email.php" method="post">
+					<div class="form-ring">
+						<div>
+							<label>Куда послать письмо (e-mail): <span>*</span></label>
+							<input type=email' name="to" placeholder="examle@mail.ru" required>
+						</div>
+						<div>
+							<label>Как к Вам обращаться: <span>*</span></label>
+							<input type="text" name="username" placeholder="Имя" required>
+						</div>
+						<div>
+							<label>Номер телефона (с кодом)</label>
+							<input type="tel" name="usernumber" placeholder="+79xxxxxxxxx">
+						</div>
+						<div>
+							<label>Сообщение</label>
+							<input type="text" name="question" placeholder="Любой текст">
+						</div>
+						<input class="bot-send-mail" type="submit" value="Послать сообщение">
+					</div>
+				</form>
+			</div>
+			<div class="form-an">
+				<form class="ans-ring" autocomplete="off" action="email.php" method="post">
+					<div class="form-ring">
+						<div>
+							<label>Куда послать письмо (e-mail): <span>*</span></label>
+							<input type=email' name="to" placeholder="examle@mail.ru" required>
+						</div>
+						<div>
+							<label>Как к Вам обращаться: <span>*</span></label>
+							<input type="text" name="username" placeholder="Имя" required>
+						</div>
+						<div>
+							<label>Номер телефона (с кодом)</label>
+							<input type="tel" name="usernumber" placeholder="+79xxxxxxxxx">
+						</div>
+						<div>
+							<label>Сообщение</label>
+							<input type="text" name="question" placeholder="Любой текст">
+						</div>
+						<input class="bot-send-mail" type="submit" value="Послать сообщение">
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+	</main>
+
+<footer class="footer">
+	<nav class="footer__nav">
+		<div class="footer__contact">
+			<h4>Контакты:</h4>
+			<ul>
+				<li><a href="tel:+79009001111">Позвонить</a></li>
+				<li><a href="mailto:rwsnsk@gmail.com">Написать</a></li>
+				<li><a href="https://t.me/+Eglb66vUpCNmZTIy">Телеграмм-канал</a></li>
+			</ul>
+		</div>
+		<div class="footer__social">
+			<h4>Copyright&#169 &#171RuWebSite&#187</h4>
+			<ul>
+				<li><a href=""><img src="/Icons/instagram-new--v2.png" alt="Instagramm" width="55px"></a></li>
+				<li><a href=""><img src="/Icons/facebook-circled.png" alt="Facebook" width="55px"></a></li>
+				<li><a href=""><img src="/Icons/vk-circled.png" alt="В контакте" width="55px"></a></li>
+				<li><a href=""><img src="/Icons/odnoklassniki.png" alt="Одноклассники" width="55px"></a></li>
+			</ul>
+		</div>
+		<div class="footer__links">
+			<h4>Полезные ссылки:</h4>
+			<ul>
+				<li><a href="#">Ссылка 1</a></li>
+				<li><a href="#">Ссылка 2</a></li>
+				<li><a href="#">Ссылка 3</a></li>
+			</ul>
+		</div>
+	</nav>
+</footer>
+
+</body>
+
+</html>

@@ -24,7 +24,7 @@
 			"Имя: ".$name."\n".
 			"Телефон: ".$usernumber."\n".
 			"Cообщение: ".$question."\n".
-			"From: postmaster@ruwebsite.ru \r\n")
+			"From: rws@ruwebsite.ru \r\n")
 	)	{
 	header("Location: {$_SERVER['HTTP_REFERER']}");
 	exit;

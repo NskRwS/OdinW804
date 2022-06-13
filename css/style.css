@@ -21,8 +21,8 @@ body {
 	padding: 0;
 	background-color: rgb(250, 236, 192);
 	position: relative;
-	min-width: 840px;
-	min-height: 100vh;
+	/* min-width: 100vw;
+	min-height: 100vh; */
 	background-image: url("/img/21_nsk2019.jpg");
 	background-size: cover;
 	background-position: top center;
@@ -30,21 +30,23 @@ body {
 	align-items: center;
 }
 h1 {
-	position: absolute;
 	display: block;
 	width: 100%;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	background: linear-gradient(180deg, darkblue 55%, lightblue 45%, blue);
+	background: linear-gradient(135deg, rgb(2, 2, 173) 15%, green 35%, blue);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: chocolate;
 	text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.17);
-	font-size: 40pt;
-	margin-top: 70px;
+	font-size: calc(34px + (17 + 17*0.7) * ((100vw  - 320px) / 1900));
+	/* font-size: calc(36px + (20 + 16*0.7) * ((100vw - 320px) / 1920)); */
+	line-height: 1.2;
+	margin: 0;
 }
+
 h2 {
 	font-size: 24pt;
 	color: chocolate;
@@ -56,6 +58,46 @@ h2 {
 	font-weight: 700;
 }
 
+.fence {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(70px auto) 1fr minmax(100px auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+.header {
+	background-color: gray;
+	width: 100%;
+	min-height: 100px;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto 200px) minmax(auto 1200px) 1fr;
+	grid-auto-flow: column;
+	grid-area: "header";
+	column-gap: 30px;
+	align-items: center;
+	z-index: 99;
+}
+
+.main {
+	width: auto;
+	min-height: 82vh;
+	background: rgb(253, 187, 45);
+	background: -moz-linear-gradient(28deg, rgba(253, 187, 45, 1) 0%, rgba(34, 193, 195, 1) 100%);
+	background: -webkit-linear-gradient(28deg, rgba(253, 187, 45, 1) 0%, rgba(34, 193, 195, 1) 100%);
+	background: linear-gradient(28deg, rgba(253, 187, 45, 1) 0%, rgba(34, 193, 195, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbb2d", endColorstr="#22c1c3", GradientType=1);
+	padding: 30px 15px;
+	display: grid;
+	grid-area: "main";
+	/* grid-template-areas: "- sidebar gallery -";
+	grid-template: 1fr / fit-content minmax(auto fit-content) minmax(auto 1400px) auto; */
+	justify-content: center;
+	z-index: 1;
+}
+
 .topmenu {
 	display: flex;
 	justify-content: flex-end;
@@ -63,7 +105,7 @@ h2 {
 	width: 100%;
 	min-width: 760px;
 	height: 65px;
-	background-color: darkcyan;
+	background-color: black;
 	position: fixed;
 	z-index: 7;
 }
@@ -72,7 +114,7 @@ h2 {
 	width: 80px;
 	height: 56px;
 	padding: 4px;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.7);
 	z-index: 8;
 	}
 	.topmenu-logo img {
@@ -95,7 +137,7 @@ h2 {
 }
 .topmenu__views:hover {
 	transform: scale(1.17);
-	box-shadow: 2px 2px 8px orange;
+	box-shadow: 2px 2px 8px white;
 	transition: all 0.2s ease-in-out;
 }
 .topmenu ul {
@@ -114,45 +156,41 @@ h2 {
 .topmenu ul li a {
 	color: wheat;
 	text-decoration: none;
-	padding: 0;
+	padding: 10px 0;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 14pt;
 	text-shadow: 0px 0px 12px black;
 }
-.topmenu ul li a:hover {
+.a-act:hover {
 	font-weight: 900;
 	text-shadow: 3px 3px 4px wheat;
-	color: chocolate;
+	color: gold;
 	transition: all 0.2s ease-in-out;
 }
 
 .wrapper {
-	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
 	justify-content: center;
 	z-index: 0;
 }
-.wrapper__first {
-	display: flex;
+
+.wrapper__first  {
+	display: inline-flex;
 	flex-wrap: wrap;
-	width: 100%;
 	position: relative;
 	align-items: start;
 	justify-content: center;
-	padding-top: 110px;
-	margin: 30px 20px 0 20px;
 }
+
 .wrapper__first-txt {
 	background-color: #fff;
 	box-shadow: 4px 4px 8px black;
 	display: inline-block;
-	width: 390px;
-	min-width: 390px;
-	max-height: 256px;
+	min-width: 22vw;
+	max-width: 25vw;
+	height: 25vh;
 	padding: 10px 10px;
 	margin: 20px 10px;
 }
@@ -162,8 +200,10 @@ h2 {
 	text-align: justify;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 12pt;
-	line-height: 105%;
+	min-width: 22vw;
+	max-width: 25vw;
+	font-size: calc(12px + (6 + 6*0.7) * ((100vw - 320px) / 1900));
+	line-height: 100%;
 	margin-top: 4px;
 	}
 
@@ -173,7 +213,18 @@ h2 {
 	border-color: chocolate;
 	position: relative;
 	display: inline-block;
-	height: 270px;
-	width: 280px;
+	min-height: 30vh;
+	min-width: 20vw;
 	margin: 20px 10px 0 10px;
+}
+
+.main__forms {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.inact {
+	color: grey !important;
 }
