@@ -20,10 +20,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: rgb(250, 236, 192);
-	position: relative;
-	/* min-width: 100vw;
-	min-height: 100vh; */
-	background-image: url("/img/21_nsk2019.jpg");
+	/* background-image: url("/img/21_nsk2019.jpg"); */
 	background-size: cover;
 	background-position: top center;
 	background-repeat: norepeat;
@@ -191,7 +188,7 @@ h2 {
 	display: inline-block;
 	width: 25vw;
 	min-width: 310px;
-	height: 15vw;
+	height: 440px;
 	padding: 10px 10px;
 	margin-bottom: 20px;
 }
@@ -202,9 +199,9 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	min-width: 310px;
-	height: 15vw;
-	font-size: calc(14px + (6 + 6*0.7) * ((100vw - 340px) / 1900));
-	line-height: 100%;
+	height: 440px;
+	font-size: calc(14px + (7 + 7*0.7) * ((100vw - 340px) / 1900));
+	line-height: 90%;
 	}
 
 	.wrapper__first img {
@@ -216,7 +213,7 @@ h2 {
 	position: relative;
 	display: inline-block;
 	min-width: 310px;
-	height: 15vw;
+	height: 440px;
 	padding: 0;
 	margin: 0 30px 20px 30px;
 }
@@ -230,4 +227,25 @@ h2 {
 
 .inact {
 	color: grey !important;
+}
+
+@media (max-width: 562px) {
+
+	.wrapper__first-img {
+		height: 310px;
+		width: 310px;
+	}
+
+	.wrapper__first-txt p {
+		height: 310px;
+		font-size: calc(16px + (8 + 8*0.7) * ((100vw - 340px) / 1900));
+	}
+
+	.topmenu {
+		display: none;
+	}
+
+	.footer__links {
+		display: none;
+	}
 }

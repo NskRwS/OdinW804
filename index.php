@@ -19,6 +19,27 @@
 </head>
 
 <body>
+
+<?php
+
+	$user = '4114361';
+	$password = 'RWSite289988';
+	$db = 'ruw2367959_bd';
+	$host = 'www.ruwebsite.ru';
+
+	$dsn = 'mysql:host='.$host.';dbname='.$db;
+	$pdo = new PDO($dsn, $user, $password);
+
+	$query = $pdo->query('SELECT * FROM `users` ORDER BY `login` DESC LIMIT 2');
+	while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+		echo '<h1>' . $row['login'] . '</h1>
+		<p><b>e-mail:<b> ' . $row['email'] . '</p>
+		<p><b>Имя:<b> ' . $row['name'] . '</p>
+		<p><b>Фамилия:<b> ' . $row['surname'] . '</p>';
+	}
+	
+?>
+
 	<header class="header"></header>
 
 	<main class="main">
