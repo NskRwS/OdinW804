@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/footer.css">
-	<link rel="stylesheet" href="css/form.css">
+	<!-- <link rel="stylesheet" href="css/form.css"> -->
 	<title>«Odin.study, W804»</title>
 </head>
 
@@ -22,24 +22,24 @@
 
 	<div class="fence">
 
-		<div  class="block">
+		<div class="block">
 
-		 <header class="header">
-			<div class="topmenu-logo"><img class="logo" src="img/rws-v2.svg" width="80px" alt="Logotip_img"></div>
-			<nav class="topmenu">
-				<ul>
-					<li><a class="a-act" href="adaptive.html">№2. Адаптивная</a></li>
-					<li><a class="a-act" href="useregist.html">№4. Формы</a></li>
-					<li><a class="inact" href="#">Ссылка</a></li>
-					<li><a class="inact" href="#">Ссылка</a></li>
-				</ul>
-				<div class="topmenu__views">
-					<a rel="noopener" href="https://odin.study/" title="Odin.study" target="_blank"><img src="img/Logo Odin.svg"
-							alt="" width="31" height="31" /></a>
-				</div>
-			</nav>
+			<header id="header" class="header">
+				<div class="topmenu-logo"><img class="logo" src="img/rws-v2.svg" width="80px" alt="Logotip_img"></div>
+				<nav class="topmenu">
+					<ul>
+						<li><a class="a-act" href="adaptive.html">№2. Адаптивная</a></li>
+						<li><a class="a-act" href="#popup">№4. Формы</a></li>
+						<li><a class="inact" href="#">Ссылка</a></li>
+						<li><a class="inact" href="#">Ссылка</a></li>
+					</ul>
+					<div class="topmenu__views">
+						<a rel="noopener" href="https://odin.study/" title="Odin.study" target="_blank"><img src="img/Logo Odin.svg"
+								alt="" width="31" height="31" /></a>
+					</div>
+				</nav>
 			</header>
-			
+
 		</div>
 
 		<main class="main">
@@ -84,28 +84,44 @@
 					<div class="wrapper__first-img"><img src="/img/Goshka-2.jpg" alt="Budgie Gosha snd mouse"></div>
 				</div>
 
-				<div class="form-an">
-					<form class="ans-ring" autocomplete="off" action="email.php" method="post">
-						<div class="form-ring">
-							<div>
-								<label>Куда послать письмо (e-mail): <span>*</span></label>
-								<input type="email" name="to" placeholder="examle@mail.ru" required>
+				<div id="popup" class="popup">
+					<a href="#header" class="popup__area"> </a>
+
+					<div class="form-an">
+						
+						<form class="ans-ring" autocomplete="off" action="email.php" method="post">
+							<div class="form-ring">
+								<div class="cross">
+									<a class="cross" href="#header">X</a>
+								</div>
+								<div>
+									<label>Адрес эл. почты (e-mail): <span>*</span></label>
+									<input type="email" name="to" placeholder="examle@mail.ru" required>
+								</div>
+								<div>
+									<label>Имя: <span>*</span></label>
+									<input type="text" name="name" placeholder="Василий Антоныч" required>
+								</div>
+								<div>
+									<label>Номер телефона (с кодом)</label>
+									<input type="tel" name="usernumber" placeholder="+79xxxxxxxxx">
+								</div>
+								<div>
+									<label>Сообщение</label>
+									<input type="text" name="question" placeholder="Любой текст">
+								</div>
+								<div>
+									<label for="options_input">Отправить подтверждение?</label>
+									<input checked type="checkbox" name="agree" value="TRUE" id="options_input">
+								</div>
+								<div>
+									<input class="bot-send-mail" type="submit" value="Послать сообщение">
+								</div>
 							</div>
-							<div>
-								<label>Как к Вам обращаться: <span>*</span></label>
-								<input type="text" name="username" placeholder="Имя" required>
-							</div>
-							<div>
-								<label>Номер телефона (с кодом)</label>
-								<input type="tel" name="usernumber" placeholder="+79xxxxxxxxx">
-							</div>
-							<div>
-								<label>Сообщение</label>
-								<input type="text" name="question" placeholder="Любой текст">
-							</div>
-							<input class="bot-send-mail" type="submit" value="Послать сообщение">
-						</div>
-					</form>
+
+						</form>
+					</div>
+
 				</div>
 
 			</section>

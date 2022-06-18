@@ -1,15 +1,16 @@
 .form-an {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 20px auto;
 	background-color: rgba(0, 0, 20, 0.7);
-	height: 480px;
+	height: 520px;
 	width: 320px;
 	padding: 5px;
 	border: 1pt black;
 	border-radius: 5px;
-	z-index: 99;
+	z-index: 999;
 }
 
 .ans-ring {
@@ -23,12 +24,12 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 0 20px;
+	padding: 0 15px;
 	box-sizing: border-box;
 }
 
 .form-ring div {
-	padding: 10px 0;
+	padding: 8px 0;
 }
 
 .bot-send-mail {
@@ -47,7 +48,7 @@
 	color: #fff;
 	font-size: 18px;
 	text-shadow: 2px 2px 2px black;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 	font-weight: bold;
 }
 
@@ -56,11 +57,11 @@
 	margin-top: 10px;
 	background-color: lightblue;
 	color: black;
-	font-size: 16pt;
+	font-size: 15pt;
 }
 
 .form-ring label span {
-	font-size: 20px;
+	font-size: 18px;
 	color: rgb(250, 44, 44);
 }
 
